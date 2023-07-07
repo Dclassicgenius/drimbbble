@@ -13,7 +13,7 @@ const User = g.model("User", {
     .optional(),
 });
 
-const Project = g.model("Projec", {
+const Project = g.model("Project", {
   title: g.string().length({ min: 3 }),
   description: g.string(),
   image: g.url(),
