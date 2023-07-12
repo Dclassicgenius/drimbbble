@@ -98,8 +98,8 @@ export const createNewProject = async (
 };
 
 export const fetchAllProjects = async (
-  category?: string,
-  endcursor?: string
+  category?: string | null,
+  endcursor?: string | null
 ) => {
   client.setHeader("x-api-key", apiKey);
 
