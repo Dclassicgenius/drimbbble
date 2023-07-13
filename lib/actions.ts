@@ -19,6 +19,7 @@ const apiUrl = isProduction
 const apiKey = isProduction
   ? process.env.NEXT_PUBLIC_GRAFBASE_API_KEY || ""
   : "1234";
+
 const serverUrl = isProduction
   ? process.env.NEXT_PUBLIC_SERVER_URL
   : "http://localhost:3000/";
