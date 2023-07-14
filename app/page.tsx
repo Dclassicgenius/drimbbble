@@ -31,7 +31,7 @@ export const revalidate = 0;
 
 const Home = async ({ searchParams: { category, endcursor } }: Props) => {
   const data = (await fetchAllProjects(
-    category || null,
+    category || "",
     endcursor || null
   )) as ProjectSearch;
 
