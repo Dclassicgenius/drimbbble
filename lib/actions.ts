@@ -12,6 +12,11 @@ import {
 } from "@/graphql";
 import { ProjectForm } from "@/common.types";
 
+interface Filter {
+  category?: { eq: string };
+  after?: string;
+}
+
 const isProduction = process.env.NODE_ENV === "production";
 const apiUrl = isProduction
   ? process.env.NEXT_PUBLIC_GRAFBASE_API_URL || ""
@@ -57,12 +62,12 @@ const makeGraphQLRequest = async (query: string, variables = {}) => {
 };
 
 export const fetchAllProjects = (
-  category: string | null | undefined = null,
-  endCursor: string | null | undefined = null
+  category?: string | null,
+  endcursor?: string | null
 ) => {
   client.setHeader("x-api-key", apiKey);
 
-  return makeGraphQLRequest(projectsQuery, { category, endCursor });
+  return makeGraphQLRequest(projectsQuery, { category, endcursor });
 };
 
 export const createNewProject = async (
