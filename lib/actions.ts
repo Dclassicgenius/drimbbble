@@ -12,11 +12,6 @@ import {
 } from "@/graphql";
 import { ProjectForm } from "@/common.types";
 
-interface Filter {
-  category?: { eq: string };
-  after?: string;
-}
-
 const isProduction = process.env.NODE_ENV === "production";
 const apiUrl = isProduction
   ? process.env.NEXT_PUBLIC_GRAFBASE_API_URL || ""
