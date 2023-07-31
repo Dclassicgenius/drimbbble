@@ -37,8 +37,8 @@ const ProjectCard = ({
       >
         <Image
           src={image}
-          width={450}
-          height={250}
+          width={485}
+          height={290}
           className="w-full h-full object-cover rounded-2xl"
           alt="Project image"
         />

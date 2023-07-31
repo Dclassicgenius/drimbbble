@@ -39,8 +39,8 @@ const RelatedProjects = async ({ userId, projectId }: RelatedProjectProps) => {
             >
               <Image
                 src={node?.image}
-                width={414}
-                height={314}
+                width={485}
+                height={290}
                 className="w-full h-full object-cover rounded-2xl"
                 alt="project image"
               />
